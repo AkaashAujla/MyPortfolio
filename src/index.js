@@ -1,3 +1,6 @@
+// Ricky Huynh 30142212
+// Akaash Aujla 30139293
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
