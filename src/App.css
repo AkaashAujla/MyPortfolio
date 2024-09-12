@@ -3,21 +3,86 @@
   padding: 0;
   box-sizing: border-box;
 
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: antiquewhite;
 }
 
 .Nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 8vh;
-  min-width: 10vw;
-  margin-left: 15vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-image: url('SideGraphic.png');
+  background-size: 100% 100vh;
+  padding-left: 0.5vw;
+  padding-top: 13vh;
+  display: block;
+}
+
+.Nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#NavLogo {
+  width: 35%;
+  height: auto;
+  padding-bottom: 5vh;
+  background-color: transparent;
+}
+
+#NavLogo:hover {
+  transform: translateX(+10px);;
+  transition: transform 0.25s ease-in-out;
+}
+
+#NavLogo:not(:hover) {
+  transform: translateX(0);
+  transition: transform 0.25s ease-in-out;
 }
 
 .NavTitle {
-  display: flex;
   font-size: 20px;
-  vertical-align: middle;
+  padding-bottom: 5vh;
+  max-width: fit-content;
+  display: block;
+  background-color: transparent;
+}
+
+.NavTitle:hover {
+  transform: translateX(+10px);
+  transition: transform 0.25s ease-in-out;
+}
+
+.NavTitle:not(:hover) {
+  transform: translateX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.NavImage {
+  width: 30%;
+  height: auto;
+  /* padding-left: 0.5vh; */
+  margin-left: 0.5vh;
+  background-color: transparent;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.NavImage:hover {
+  transform: rotate(210deg);
+}
+
+.NavImage:not(:hover) {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
 }
