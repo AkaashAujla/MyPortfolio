@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Header';
+import SideBar from './SideBar';
 import HomeMainSection from './HomeMainSection'
 
 function HomePage() {
     return (
         <div>
-            <Header />
+            <SideBar />
             <HomeMainSection />
         </div>
     );

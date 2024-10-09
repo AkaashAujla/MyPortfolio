@@ -1,14 +1,11 @@
 import React from 'react';
-import Header from './Header';
+import SideBar from './SideBar';
 
-
-function ProjectPage() {
-  return (
-    <div>
-      
-    </div>
-  )
+function ContactPage() {
+    return (
+        <div>
+            <SideBar />
+        </div>
+    );
 }
-
-export default ProjectPage
-
+export default ContactPage;

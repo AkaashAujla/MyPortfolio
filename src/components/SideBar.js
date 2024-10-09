@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-function Header() {
+function SideBar() {
   return (
-    <header class="Header">
+    <header class="SideBar">
       <nav>
         <div class="NavWrapper">
           <ul class="Nav">
@@ -19,4 +19,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default SideBar;
