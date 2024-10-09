@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import ProjectPage from './components/ProjectPage';
+import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
-import PhotographyPage from './components/PhotographyPage';
+import PhotographyPage from './components/PhotographyPortfolio';
 import './App.css';
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Productpage" element={<ProjectPage />} />
+        <Route path="/Projectspage" element={<ProjectsPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />
-        <Route path="/PhotographyPage" element={<PhotographyPage />} />
+        <Route path="/PhotographyPortfolio" element={<PhotographyPage />} />
       </Routes>
     </BrowserRouter>
   );

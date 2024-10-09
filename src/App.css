@@ -14,11 +14,36 @@
   left: 0;
   width: 250px;
   height: 100vh;
-  background-image: url('SideGraphic.png');
-  background-size: 100% 100vh;
   padding-left: 0.5vw;
   padding-top: 13vh;
   display: block;
+  z-index: 1; /* Ensure navbar content is on top */
+  overflow: hidden; /* Prevent overflow of background image */
+}
+
+.Nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 235, 215, 0.849);
+  background-image: url('SideGraphic.png');
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: -1; /* Place it behind the navbar content */
+  clip-path: inset(100% 0 0 0); /* Start fully hidden */
+  transition: clip-path 0.65s ease-in-out; /* Smooth transition */
+}
+
+.Nav:hover::before {
+  clip-path: inset(0 0 0 0); /* Reveal from top to bottom */
+}
+
+.Nav:not(:hover)::before {
+  clip-path: inset(0 0 100% 0); /* Hide from bottom to top */
 }
 
 .Nav ul li {
@@ -85,4 +110,54 @@
 .NavImage:not(:hover) {
   transform: rotate(0deg);
   transition: transform 0.5s ease-in-out;
+}
+
+.MainSection {
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.MainCard {
+  width: 70%;
+  background-color: #dfc09c;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.TinyCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.TinyCard {
+  width: 180px;
+  background-color: #f0b445;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.MediumCardsWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.MediumCard {
+  width: 48%; /* Half the width of the wider card */
+  background-color: #f1d997;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
