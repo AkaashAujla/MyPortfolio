@@ -7,11 +7,11 @@ function SideBar() {
       <nav>
         <div class="NavWrapper">
           <ul class="Nav">
-            <Link to="/"><img src="/images/Logo.png" alt="Logo" id="NavLogo"/></Link>
+            <Link to="/"><img src="./images/Logo.png" alt="Logo" id="NavLogo"/></Link>
             <Link to="/" class="NavTitle">Home</Link>
             <Link to="/ProjectsPage" class="NavTitle">Projects</Link>
             <Link to="/ContactPage" class="NavTitle">Contact</Link>
-            <Link to="/PhotographyPortfolio"><img src="/images/Shutter.png" alt="Logo" class="NavImage"/></Link>
+            <Link to="/PhotographyPortfolio"><img src="./images/Shutter.png" alt="Logo" class="NavImage"/></Link>
           </ul>
         </div>
       </nav>
